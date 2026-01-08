@@ -43,8 +43,9 @@ export default function Work() {
               grid-cols-1
               md:grid-cols-2
               lg:grid-cols-3
-              gap-6 md:gap-8
-              px-[6vw] py-[5.3vw]
+              gap-1 md:gap-2
+              px-[4.5vw] py-[4vw]
+
             "
           >
 

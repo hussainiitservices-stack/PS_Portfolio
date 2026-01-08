@@ -16,7 +16,7 @@ export function Footer() {
           {/* Brand & Copyright */}
           <div className="space-y-2">
             <Link to="/" className="text-sm font-sans font-semibold tracking-[0.2em] uppercase">
-              STUDIO
+              PUNEET BAKSHI
             </Link>
             <p className="text-xs text-muted-foreground font-sans">
               © {currentYear} All rights reserved.

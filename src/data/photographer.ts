@@ -1,15 +1,17 @@
 import type { PhotographerInfo } from '@/types';
 
 export const photographerInfo: PhotographerInfo = {
-  name: 'Sarah Mitchell',
-  tagline: 'Editorial & Commercial Photographer',
+  name: 'Puneet Bakshi',
+  tagline: 'Editorial & Commercial Visual Creator in Motion',
   heroIntroduction: 'Creating visual narratives that capture authentic moments and timeless stories.',
-  biography: `Sarah Mitchell is an award-winning photographer specializing in editorial and commercial work, with recognition including the International Photography Awards Editorial Photographer of the Year 2023 and PDN Photo Annual Winner 2022. With over a decade of experience, her work has been featured in numerous international publications and exhibitions, collaborating with clients such as Vogue, The New York Times, National Geographic, Adobe, Apple, Nike, and Architectural Digest.
+  biography: `We approach every project as a visual narrative—crafted with intention, precision, and emotion. With years of experience across video editing, motion graphics, and cinematography, our work spans editorial and commercial storytelling for brands, creators, and agencies seeking clarity and impact.
 
-Based in New York with an MFA in Photography from the School of Visual Arts, Sarah brings a unique perspective to every project, combining technical excellence with artistic vision. Her approach to photography is deeply rooted in storytelling, believing that every image should convey emotion and meaning beyond its visual appeal.`,
-  approach: `My photography is guided by three principles: authenticity, composition, and light. I believe the best images emerge when subjects feel comfortable and genuine, when composition guides the viewer's eye naturally, and when light reveals the essence of the moment.
+Rooted in a strong understanding of visual language and modern production techniques, we combine technical excellence with creative direction to deliver visuals that feel purposeful and timeless. Each frame, transition, and movement is designed to serve the story—not just the screen.
 
-Whether working on editorial assignments or commercial projects, I strive to create images that transcend their immediate purpose and become lasting visual statements.`,
+Our philosophy is simple: visuals should do more than look good. They should communicate, connect, and leave a lasting impression.`,
+  approach: `Our work is shaped by three core principles: storytelling, rhythm, and visual clarity. We believe the strongest visuals emerge when ideas feel authentic, composition guides the viewer effortlessly, and movement and light work together to elevate the narrative.
+
+Across editorial and commercial projects, our approach remains the same—crafting visuals that go beyond their immediate use. Every edit, transition, and frame is designed to create a lasting impression, turning moments into meaningful visual stories.`,
   awards: [
     'International Photography Awards - Editorial Photographer of the Year 2023',
     'PDN Photo Annual - Winner 2022',

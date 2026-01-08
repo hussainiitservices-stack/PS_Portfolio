@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useScrollPosition } from '@/hooks/useScrollPosition';
 import { ThemeToggle } from './ThemeToggle';
 import { cn } from '@/lib/utils';
 
@@ -14,11 +13,10 @@ const navLinks = [
 
 /**
  * Minimal header inspired by alexanderglucina.com
- * Fixed position, clean typography, subtle interactions
+ * Scroll logic removed, header always solid
  */
 export function Header() {
   const location = useLocation();
-  const { isScrolled } = useScrollPosition();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   // Close mobile menu on route change
@@ -38,33 +36,20 @@ export function Header() {
     };
   }, [mobileMenuOpen]);
 
-  const isHomepage = location.pathname === '/';
-  const showSolidBg = isScrolled || !isHomepage;
-
   return (
     <>
       <motion.header
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-          showSolidBg
-            ? 'bg-background/95 backdrop-blur-sm'
-            : 'bg-transparent'
-        )}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-background/95 backdrop-blur-sm"
       >
         <div className="container-editorial">
           <div className="flex items-center justify-between h-20 md:h-24">
             {/* Logo / Brand */}
             <Link
               to="/"
-              className={cn(
-                'group flex flex-col transition-colors duration-300',
-                showSolidBg
-                  ? 'text-foreground'
-                  : 'text-white'
-              )}
+              className="group flex flex-col transition-colors duration-300 text-foreground"
             >
               <span className="text-lg md:text-xl font-sans font-semibold tracking-[0.2em] uppercase">
                 PUNEET BAKSHI
@@ -82,10 +67,9 @@ export function Header() {
                   to={link.path}
                   className={cn(
                     'relative text-sm font-sans font-medium tracking-[0.15em] uppercase transition-colors duration-300',
-                    showSolidBg
-                      ? 'text-foreground hover:text-muted-foreground'
-                      : 'text-white hover:text-white/70',
-                    location.pathname === link.path && 'after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-current'
+                    'text-foreground hover:text-muted-foreground',
+                    location.pathname === link.path &&
+                      'after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-current'
                   )}
                 >
                   {link.name}
@@ -97,12 +81,7 @@ export function Header() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={cn(
-                'md:hidden p-2 -mr-2 transition-colors duration-300',
-                showSolidBg
-                  ? 'text-foreground'
-                  : 'text-white'
-              )}
+              className="md:hidden p-2 -mr-2 transition-colors duration-300 text-foreground"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
               {mobileMenuOpen ? (

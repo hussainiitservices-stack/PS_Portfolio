@@ -26,7 +26,7 @@ export default function About() {
               className="max-w-4xl"
             >
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-light mb-8 text-balance">
-                We create visual stories that resonate and inspire
+                Shaping stories through cinematic editing, motion design, and visual storytelling.
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground font-sans font-light leading-relaxed">
                 {photographerInfo.tagline}
@@ -49,7 +49,7 @@ export default function About() {
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
                     src={photographerInfo.portraitImage}
-                    alt="Studio portrait"
+                    alt="portrait"
                     className="w-full h-full object-cover"
                   />
                 </div>
