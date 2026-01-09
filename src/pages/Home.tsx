@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { projects } from '@/data/projects';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { Typewriter } from 'react-simple-typewriter';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 /**
  * Home page with Work intro animation
@@ -15,6 +15,52 @@ export default function Home() {
 
   const [showGrid, setShowGrid] = useState(!showWorkIntro);
 
+  /* =====================================================
+     HARD FIX: Lock initial scroll position on refresh
+     ===================================================== */
+  const initialScrollY = useRef<number | null>(null);
+
+  const headline = 'Work';
+const [typedText, setTypedText] = useState('');
+
+useEffect(() => {
+  if (!showWorkIntro) return;
+
+  setTypedText('');
+  let index = 0;
+
+  const interval = setInterval(() => {
+    setTypedText((prev) => prev + headline.charAt(index));
+    index++;
+
+    if (index >= headline.length) {
+      clearInterval(interval);
+    }
+  }, 70);
+
+  return () => clearInterval(interval);
+}, [showWorkIntro]);
+
+
+  useEffect(() => {
+    // Save scroll position at first paint
+    initialScrollY.current = window.scrollY;
+
+    // After layout + animations settle, restore it once
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (initialScrollY.current !== null) {
+          window.scrollTo({
+            top: initialScrollY.current,
+            left: 0,
+            behavior: 'instant',
+          });
+        }
+      });
+    });
+  }, []);
+  /* ===================================================== */
+
   useEffect(() => {
     if (showWorkIntro) {
       setShowGrid(false);
@@ -24,7 +70,7 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="Studio — Creative Portfolio"
+        title="PUNEET BAKSHI — Portfolio"
         description="A minimalist creative portfolio showcasing exceptional visual work through an editorial lens."
       />
 
@@ -42,14 +88,13 @@ export default function Home() {
                   setTimeout(() => setShowGrid(true), 600)
                 }
               >
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-light mb-6">
-                  <Typewriter
-                    words={['Work']}
-                    cursor
-                    cursorStyle=""
-                    typeSpeed={70}
-                  />
-                </h1>
+<h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-light mb-6">
+  {typedText}
+  
+</h1>
+
+
+
 
                 <p className="text-lg md:text-xl text-muted-foreground font-sans font-light leading-relaxed">
                   <Typewriter

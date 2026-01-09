@@ -13,9 +13,10 @@ import { AnimatePresence } from "framer-motion";
 import { lazy, Suspense } from "react";
 import Home from "./pages/Home";
 
+
 // Code-split route components for better performance
 const Index = lazy(() => import("./pages/Index"));
-const Work = lazy(() => import("./pages/Work"));
+// const Work = lazy(() => import("./pages/Work"));
 const ProjectDetail = lazy(() => import("./pages/ProjectDetail"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -28,6 +29,7 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
+      
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
@@ -37,14 +39,14 @@ function AnimatedRoutes() {
             </PageTransition>
           }
         />
-        <Route
+        {/* <Route
           path="/work"
           element={
             <PageTransition>
               <Work />
             </PageTransition>
           }
-        />
+        /> */}
         <Route
           path="/project/:slug"
           element={

@@ -15,7 +15,8 @@ export default function Work() {
         description="Browse our complete portfolio of visual work spanning diverse subjects and styles."
       />
       
-      <div className="min-h-screen">
+      <div className="min-h-screen pt-24">
+
         {/* Hero Section */}
         <section className="py-16 md:py-24 border-b border-border">
           <div className="container-editorial">

@@ -13,16 +13,17 @@ const navLinks = [
 
 /**
  * Minimal header inspired by alexanderglucina.com
- * Scroll logic removed, header always solid
+ * Scroll logic removed
+ * Work triggers Home typewriter intro
  */
 export function Header() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
-  }, [location.pathname]);
+  }, [location.pathname, location.search]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -61,20 +62,35 @@ export function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-10">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className={cn(
-                    'relative text-sm font-sans font-medium tracking-[0.15em] uppercase transition-colors duration-300',
-                    'text-foreground hover:text-muted-foreground',
-                    location.pathname === link.path &&
-                      'after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-current'
-                  )}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.name === 'Work' ? (
+                  <Link
+                    key="work"
+                    to="/?showWorkIntro=true"
+                    className={cn(
+                      'relative text-sm font-sans font-medium tracking-[0.15em] uppercase transition-colors duration-300',
+                      'text-foreground hover:text-muted-foreground',
+                      location.search.includes('showWorkIntro') &&
+                        'after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-current'
+                    )}
+                  >
+                    Work
+                  </Link>
+                ) : (
+                  <Link
+                    key={link.path}
+                    to={link.path}
+                    className={cn(
+                      'relative text-sm font-sans font-medium tracking-[0.15em] uppercase transition-colors duration-300',
+                      'text-foreground hover:text-muted-foreground',
+                      location.pathname === link.path &&
+                        'after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-current'
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                )
+              )}
               <ThemeToggle />
             </nav>
 
@@ -107,18 +123,23 @@ export function Header() {
             <div className="flex flex-col items-center justify-center h-full gap-8">
               {navLinks.map((link, index) => (
                 <motion.div
-                  key={link.path}
+                  key={link.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <Link
-                    to={link.path}
+                    to={
+                      link.name === 'Work'
+                        ? '/?showWorkIntro=true'
+                        : link.path
+                    }
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
                       'text-3xl font-display font-light tracking-wide transition-colors',
-                      location.pathname === link.path
+                      location.pathname === link.path ||
+                        location.search.includes('showWorkIntro')
                         ? 'text-foreground'
                         : 'text-muted-foreground hover:text-foreground'
                     )}
@@ -127,6 +148,7 @@ export function Header() {
                   </Link>
                 </motion.div>
               ))}
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
