@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { projects } from '@/data/projects';
 import { SEOHead } from '@/components/seo/SEOHead';
-import { Typewriter } from 'react-simple-typewriter';
 import { useState, useEffect, useRef } from 'react';
 
 /**
@@ -20,33 +19,9 @@ export default function Home() {
      ===================================================== */
   const initialScrollY = useRef<number | null>(null);
 
-  const headline = 'Work';
-const [typedText, setTypedText] = useState('');
-
-useEffect(() => {
-  if (!showWorkIntro) return;
-
-  setTypedText('');
-  let index = 0;
-
-  const interval = setInterval(() => {
-    setTypedText((prev) => prev + headline.charAt(index));
-    index++;
-
-    if (index >= headline.length) {
-      clearInterval(interval);
-    }
-  }, 70);
-
-  return () => clearInterval(interval);
-}, [showWorkIntro]);
-
-
   useEffect(() => {
-    // Save scroll position at first paint
     initialScrollY.current = window.scrollY;
 
-    // After layout + animations settle, restore it once
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         if (initialScrollY.current !== null) {
@@ -77,7 +52,7 @@ useEffect(() => {
       <div className="min-h-screen pt-20 md:pt-24">
         {/* Intro Section */}
         {showWorkIntro && (
-          <section className="py-16 md:py-24 border-b border-border">
+          <section className="pt-16 pb-12 border-b border-border">
             <div className="container-editorial">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -85,25 +60,17 @@ useEffect(() => {
                 transition={{ duration: 0.8 }}
                 className="max-w-3xl"
                 onAnimationComplete={() =>
-                  setTimeout(() => setShowGrid(true), 600)
+                  setTimeout(() => setShowGrid(true), 400)
                 }
               >
-<h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-light mb-6">
-  {typedText}
-  
-</h1>
-
-
-
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-light mb-4">
+                  Work
+                </h1>
 
                 <p className="text-lg md:text-xl text-muted-foreground font-sans font-light leading-relaxed">
-                  <Typewriter
-                    words={[
-                      'Browse my complete portfolio of video editing and motion graphic design projects, showcasing my skills in storytelling, visual effects, and creative direction.',
-                    ]}
-                    typeSpeed={35}
-                    delaySpeed={800}
-                  />
+                  Browse my complete portfolio of video editing and motion graphic
+                  design projects, showcasing my skills in storytelling, visual
+                  effects, and creative direction.
                 </p>
               </motion.div>
             </div>
@@ -154,7 +121,7 @@ useEffect(() => {
           </div>
         </motion.section>
 
-        <div className="h-16 md:h-24" />
+        <div className="h-12 md:h-16" />
       </div>
     </>
   );

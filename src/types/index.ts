@@ -32,23 +32,18 @@ export interface Project {
 export interface PhotographerInfo {
   name: string;
   tagline: string;
-  heroIntroduction: string;
-  biography: string;
-  approach: string;
-  awards: string[];
-  clients: string[];
-  education: string;
-  location: string;
-  email: string;
-  phone: string;
-  availability: string;
-  socialLinks: {
-    instagram?: string;
-    linkedin?: string;
-    behance?: string;
-  };
-  portraitImage: string;
+
+  location?: string;
+  email?: string;
+  phone?: string;
+
+  heroIntroduction?: string;
+  biography?: string;
+  approach?: string;
+  awards?: string[];
+  clients?: string[];
 }
+
 
 export interface ContactSubmission {
   name: string;

@@ -13,7 +13,7 @@ export default function Contact() {
     <>
       <SEOHead
         title="Contact"
-        description={`Get in touch with us for inquiries, collaborations, and project bookings. ${photographerInfo.availability}`}
+        description={`Get in touch with us for inquiries, collaborations, and project bookings. Reach out via email or phone.`}
       />
       
       <div className="min-h-screen flex flex-col">
@@ -83,7 +83,7 @@ export default function Contact() {
               </motion.div>
 
               {/* Social Links */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -126,10 +126,10 @@ export default function Contact() {
                     <span className="text-sm font-sans font-light hidden md:inline">Email</span>
                   </a>
                 </div>
-              </motion.div>
+              </motion.div> */}
 
               {/* Availability Notice */}
-              {photographerInfo.availability && (
+              {/* {photographerInfo.availability && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -140,7 +140,7 @@ export default function Contact() {
                     {photographerInfo.availability}
                   </p>
                 </motion.div>
-              )}
+              )} */}
             </div>
           </div>
         </section>

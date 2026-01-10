@@ -46,7 +46,7 @@ export function Footer() {
           </nav>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
+          {/* <div className="flex items-center gap-4">
             {photographerInfo.socialLinks.instagram && (
               <a
                 href={photographerInfo.socialLinks.instagram}
@@ -76,7 +76,7 @@ export function Footer() {
             >
               <Mail className="size-4" />
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

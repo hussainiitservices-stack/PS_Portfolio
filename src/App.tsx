@@ -12,6 +12,7 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { AnimatePresence } from "framer-motion";
 import { lazy, Suspense } from "react";
 import Home from "./pages/Home";
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 
 
 // Code-split route components for better performance
@@ -29,7 +30,7 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
-      
+      <ScrollToTop />
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
