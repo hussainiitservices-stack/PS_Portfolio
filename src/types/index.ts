@@ -7,6 +7,8 @@ export type ProjectCategory = 'portraits' | 'landscapes' | 'editorial' | 'archit
 
 export type AspectRatio = 'portrait' | 'landscape' | 'square';
 
+export type ProjectType = 'image' | 'video';
+
 export interface ProjectImage {
   id: string;
   src: string;
@@ -27,9 +29,12 @@ export interface Project {
   camera?: string;
   location?: string;
   slug: string;
+  type?: ProjectType;
+  vimeoId?: string;
 }
 
 export interface PhotographerInfo {
+  portraitImage: string;
   name: string;
   tagline: string;
 

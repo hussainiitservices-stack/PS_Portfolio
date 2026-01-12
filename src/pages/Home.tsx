@@ -45,14 +45,14 @@ export default function Home() {
   return (
     <>
       <SEOHead
-        title="PUNEET BAKSHI — Portfolio"
+        title="ADVANCE CINEMATICS — Portfolio"
         description="A minimalist creative portfolio showcasing exceptional visual work through an editorial lens."
       />
 
       <div className="min-h-screen pt-20 md:pt-24">
         {/* Intro Section */}
         {showWorkIntro && (
-          <section className="pt-16 pb-12 border-b border-border">
+          <section className="pt-16 pb-12 ">
             <div className="container-editorial">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export default function Home() {
                   setTimeout(() => setShowGrid(true), 400)
                 }
               >
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-light mb-4">
+                {/* <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-light mb-4">
                   Work
                 </h1>
 
@@ -71,7 +71,7 @@ export default function Home() {
                   Browse my complete portfolio of video editing and motion graphic
                   design projects, showcasing my skills in storytelling, visual
                   effects, and creative direction.
-                </p>
+                </p> */}
               </motion.div>
             </div>
           </section>

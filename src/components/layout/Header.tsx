@@ -53,7 +53,7 @@ export function Header() {
               className="group flex flex-col transition-colors duration-300 text-foreground"
             >
               <span className="text-lg md:text-xl font-sans font-semibold tracking-[0.2em] uppercase">
-                PUNEET BAKSHI
+                ADVANCE CINEMATICS
               </span>
               <span className="text-[10px] md:text-xs font-sans font-light tracking-[0.15em] text-current/70">
                 Video Editor | Motion Graphic Designer | Cinematographer

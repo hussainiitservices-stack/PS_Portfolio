@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { photographerInfo } from '@/data/photographer';
 import { SEOHead } from '@/components/seo/SEOHead';
+import { VideoCard } from '@/components/portfolio/VideoCard';
+
 
 /**
  * About page with editorial layout
@@ -24,7 +26,7 @@ export default function About() {
         {/* =========================
             HERO SECTION
         ========================= */}
-        <section className="pt-24 pb-16 border-b border-border">
+        {/* <section className="pt-24 pb-16 border-b border-border">
           <div className="container-editorial">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -41,7 +43,7 @@ export default function About() {
               </p>
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         {/* =========================
             ABOUT TEXT
@@ -132,6 +134,23 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        {/* =========================
+    SHOWREEL VIDEOS
+========================= */}
+<section className="pt-20 pb-24 border-t border-border">
+  <div className="container-editorial">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2">
+      
+      <VideoCard vimeoId="1153470464" />
+      <VideoCard vimeoId="1153474335" />
+      <VideoCard vimeoId="1153474359" />
+      <VideoCard vimeoId="1153474376" />
+
+    </div>
+  </div>
+</section>
+
 
 {/* =========================
     RESUME MODAL

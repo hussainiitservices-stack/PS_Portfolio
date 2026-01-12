@@ -18,7 +18,7 @@ export default function Work() {
       <div className="min-h-screen pt-24">
 
         {/* Hero Section */}
-        <section className="py-16 md:py-24 border-b border-border">
+        {/* <section className="py-16 md:py-24 border-b border-border">
           <div className="container-editorial">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function Work() {
               </p>
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         {/* Projects Grid */}
         <section className="py-6 md:py-8">
