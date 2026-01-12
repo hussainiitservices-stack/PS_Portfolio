@@ -52,7 +52,7 @@ export default function Home() {
       <div className="min-h-screen pt-20 md:pt-24">
         {/* Intro Section */}
         {showWorkIntro && (
-          <section className="pt-16 pb-12 ">
+          <section className="pt-1 pb-0 ">
             <div className="container-editorial">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
