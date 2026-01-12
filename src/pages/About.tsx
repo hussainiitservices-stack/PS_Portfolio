@@ -144,7 +144,7 @@ export default function About() {
       
       <VideoCard vimeoId="1153470464" />
       <VideoCard vimeoId="1153474335" />
-      <VideoCard vimeoId="1153474359" />
+      <VideoCard vimeoId="1153496488" />
       <VideoCard vimeoId="1153474376" />
 
     </div>
