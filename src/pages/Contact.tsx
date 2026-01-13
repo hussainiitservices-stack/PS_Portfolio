@@ -45,41 +45,61 @@ export default function Contact() {
               >
                 {/* Email - Primary contact */}
                 <div>
-                  <p className="text-xs font-sans font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4">
-                    Email
-                  </p>
-                  <a
-                    href={`mailto:${photographerInfo.email}`}
-                    className="text-2xl md:text-3xl lg:text-4xl font-display font-light text-foreground hover:text-muted-foreground transition-colors"
-                  >
-                    {photographerInfo.email}
-                  </a>
-                </div>
+  <p
+    className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4"
+    style={{ fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }}
+  >
+    Email
+  </p>
+
+  <a
+    href={`mailto:${photographerInfo.email}`}
+    className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground hover:text-muted-foreground transition-colors"
+    style={{ fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }}
+  >
+    {photographerInfo.email}
+  </a>
+</div>
+
 
                 {/* Phone - Optional */}
                 {photographerInfo.phone && (
                   <div>
-                    <p className="text-xs font-sans font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4">
-                      Phone
-                    </p>
-                    <a
-                      href={`tel:${photographerInfo.phone}`}
-                      className="text-2xl md:text-3xl lg:text-4xl font-display font-light text-foreground hover:text-muted-foreground transition-colors"
-                    >
-                      {photographerInfo.phone}
-                    </a>
-                  </div>
+  <p
+    className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4"
+    style={{ fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }}
+  >
+    Phone
+  </p>
+
+  <a
+    href={`tel:${photographerInfo.phone}`}
+    className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground hover:text-muted-foreground transition-colors"
+    style={{ fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }}
+  >
+    {photographerInfo.phone}
+  </a>
+</div>
+
                 )}
 
                 {/* Location */}
                 <div>
-                  <p className="text-xs font-sans font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4">
-                    Location
-                  </p>
-                  <p className="text-2xl md:text-3xl lg:text-4xl font-display font-light text-foreground">
-                    {photographerInfo.location}
-                  </p>
-                </div>
+  <p
+    className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4"
+    style={{ fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }}
+  >
+    Location
+  </p>
+
+  <p
+    className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground"
+    style={{ fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }}
+  >
+    {photographerInfo.location}
+  </p>
+</div>
+
               </motion.div>
 
               {/* Social Links */}

@@ -1,13 +1,38 @@
 /**
  * Core TypeScript interfaces for Frame Portfolio
  * Based on SPECIFICATION.md data model requirements
+ *
+ * NOTE:
+ * - Schema is intentionally simple
+ * - No runtime logic
+ * - No provider guessing
+ * - Video handling is explicit
  */
 
-export type ProjectCategory = 'portraits' | 'landscapes' | 'editorial' | 'architecture' | 'documentary';
+/* ======================
+   PROJECT ENUMS
+====================== */
+
+export type ProjectCategory =
+  | 'portraits'
+  | 'landscapes'
+  | 'editorial'
+  | 'architecture'
+  | 'documentary';
 
 export type AspectRatio = 'portrait' | 'landscape' | 'square';
 
 export type ProjectType = 'image' | 'video';
+
+/**
+ * Supported video providers
+ * (YouTube intentionally excluded)
+ */
+export type VideoProvider = 'vimeo' | 'drive';
+
+/* ======================
+   IMAGE TYPE
+====================== */
 
 export interface ProjectImage {
   id: string;
@@ -17,21 +42,73 @@ export interface ProjectImage {
   caption?: string;
 }
 
+/* ======================
+   PROJECT TYPE
+====================== */
+
 export interface Project {
   id: string;
   title: string;
-  category: ProjectCategory;
+  slug: string;
   year: string;
+
+  category: ProjectCategory;
+
+  /**
+   * Explicit project type
+   * - image → gallery-based project
+   * - video → cinematic / documentary video
+   */
+  type: ProjectType;
+
+  /**
+   * Used for grid thumbnail
+   * (image OR video thumbnail)
+   */
   coverImage: string;
+
+  /**
+   * Image gallery
+   * - Required for image projects
+   * - Can be empty array for video projects
+   */
   images: ProjectImage[];
+
+  /**
+   * SEO-safe description
+   * (even if not rendered for video projects)
+   */
   description: string;
+
+  /* -------- Optional metadata (image projects mainly) -------- */
+
   client?: string;
   camera?: string;
   location?: string;
-  slug: string;
-  type?: ProjectType;
+
+  /* -------- Video-specific fields -------- */
+
+  /**
+   * Required ONLY when type === 'video'
+   */
+  provider?: VideoProvider;
+
+  /**
+   * Vimeo video ID
+   * Required when provider === 'vimeo'
+   */
   vimeoId?: string;
+
+  /**
+   * Google Drive file ID
+   * Required when provider === 'drive'
+   */
+  driveFileId?: string;
 }
+
+/* ======================
+   PHOTOGRAPHER INFO
+====================== */
 
 export interface PhotographerInfo {
   portraitImage: string;
@@ -49,6 +126,9 @@ export interface PhotographerInfo {
   clients?: string[];
 }
 
+/* ======================
+   CONTACT FORM
+====================== */
 
 export interface ContactSubmission {
   name: string;
