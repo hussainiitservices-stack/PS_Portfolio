@@ -72,14 +72,20 @@ export default function Contact() {
     Phone
   </p>
 
-  <a
-    href={`tel:${photographerInfo.phone}`}
-    className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground hover:text-muted-foreground transition-colors"
-    style={{ fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }}
-  >
-    {photographerInfo.phone}
-  </a>
+  <div className="space-y-2">
+    {photographerInfo.phone.map((number) => (
+      <a
+        key={number}
+        href={`tel:${number.replace(/[^\d+]/g, '')}`}
+        className="block text-2xl md:text-3xl lg:text-4xl font-light text-foreground hover:text-muted-foreground transition-colors"
+        style={{ fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }}
+      >
+        {number}
+      </a>
+    ))}
+  </div>
 </div>
+
 
                 )}
 
