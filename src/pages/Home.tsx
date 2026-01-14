@@ -79,7 +79,7 @@ export default function Home() {
 
         {/* Grid */}
         <motion.section
-          className="py-6 md:py-8"
+          className="pt-6 pb-12 md:pt-8 md:pb-16"
           initial={{ opacity: 0, y: 40 }}
           animate={showGrid ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}

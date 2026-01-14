@@ -10,6 +10,10 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  build: {
+    chunkSizeWarningLimit: 1000,
+    cssCodeSplit: true,
+  },
   plugins: [tailwindcss(), react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: {

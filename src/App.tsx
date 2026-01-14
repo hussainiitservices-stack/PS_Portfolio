@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { Layout } from "@/components/layout/Layout";
 import { SkipToContent } from "@/components/ui/SkipToContent";
 import { LoadingFallback } from "@/components/ui/LoadingFallback";
@@ -12,7 +13,7 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { AnimatePresence } from "framer-motion";
 import { lazy, Suspense } from "react";
 import Home from "./pages/Home";
-import { ScrollToTop } from "@/components/layout/ScrollToTop";
+
 
 
 // Code-split route components for better performance
@@ -36,18 +37,18 @@ function AnimatedRoutes() {
           path="/"
           element={
             <PageTransition>
+              <About />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/work"
+          element={
+            <PageTransition>
               <Home />
             </PageTransition>
           }
         />
-        {/* <Route
-          path="/work"
-          element={
-            <PageTransition>
-              <Work />
-            </PageTransition>
-          }
-        /> */}
         <Route
           path="/project/:slug"
           element={

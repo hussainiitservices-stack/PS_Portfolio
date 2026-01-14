@@ -37,9 +37,7 @@ export function ProjectCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      {project.type === 'video' && project.vimeoId ? (
-        <VideoCard vimeoId={project.vimeoId} />
-      ) : (
+      
         <Link
           to={`/project/${project.slug}`}
           className="group block relative overflow-hidden rounded-sm"
@@ -83,7 +81,7 @@ export function ProjectCard({
             <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 transition-colors duration-500" />
           </div>
         </Link>
-      )}
+      
     </motion.div>
   );
 }

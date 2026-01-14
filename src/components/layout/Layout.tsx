@@ -8,14 +8,8 @@ interface LayoutProps {
   children: ReactNode;
 }
 
-/**
- * Main layout wrapper component
- * Provides consistent header and footer across all pages
- * Homepage allows header to overlay hero
- */
 export function Layout({ children }: LayoutProps) {
   const location = useLocation();
-  const isHomepage = location.pathname === '/';
 
   useEffect(() => {
     if (location.search.includes('showWorkIntro=true')) {
@@ -33,15 +27,13 @@ export function Layout({ children }: LayoutProps) {
 
       <main
         id="main-content"
-        className={`flex-1 ${isHomepage ? '' : 'pt-20 md:pt-24'}`}
+        className="flex-1 pt-20 md:pt-24"
         tabIndex={-1}
       >
         {children}
       </main>
 
       <Footer />
-
-      {/* Global Scroll To Top Button */}
       <ScrollToTopButton />
     </div>
   );

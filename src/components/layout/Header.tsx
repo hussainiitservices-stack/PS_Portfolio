@@ -7,14 +7,14 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { name: 'Work', path: '/work' },
-  { name: 'About', path: '/about' },
+  { name: 'About', path: '/' },
   { name: 'Contact', path: '/contact' },
 ];
+
 
 /**
  * Minimal header inspired by alexanderglucina.com
  * Scroll logic removed
- * Work triggers Home typewriter intro
  */
 export function Header() {
   const location = useLocation();
@@ -23,7 +23,7 @@ export function Header() {
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
-  }, [location.pathname, location.search]);
+  }, [location.pathname]);
 
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
@@ -56,41 +56,26 @@ export function Header() {
                 ADVANCE CINEMATICS
               </span>
               <span className="text-[10px] md:text-xs font-sans font-light tracking-[0.15em] text-current/70">
-                Video Editor | Motion Graphic Designer | Cinematographer
+                Video Editing | Motion Graphic Development | Cinematographer
               </span>
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-10">
-              {navLinks.map((link) =>
-                link.name === 'Work' ? (
-                  <Link
-                    key="work"
-                    to="/?showWorkIntro=true"
-                    className={cn(
-                      'relative text-sm font-sans font-medium tracking-[0.15em] uppercase transition-colors duration-300',
-                      'text-foreground hover:text-muted-foreground',
-                      location.search.includes('showWorkIntro') &&
-                        'after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-current'
-                    )}
-                  >
-                    Work
-                  </Link>
-                ) : (
-                  <Link
-                    key={link.path}
-                    to={link.path}
-                    className={cn(
-                      'relative text-sm font-sans font-medium tracking-[0.15em] uppercase transition-colors duration-300',
-                      'text-foreground hover:text-muted-foreground',
-                      location.pathname === link.path &&
-                        'after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-current'
-                    )}
-                  >
-                    {link.name}
-                  </Link>
-                )
-              )}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={cn(
+                    'relative text-sm font-sans font-medium tracking-[0.15em] uppercase transition-colors duration-300',
+                    'text-foreground hover:text-muted-foreground',
+                    location.pathname === link.path &&
+                      'after:absolute after:-bottom-1 after:left-0 after:w-full after:h-px after:bg-current'
+                  )}
+                >
+                  {link.name}
+                </Link>
+              ))}
               <ThemeToggle />
             </nav>
 
@@ -130,16 +115,11 @@ export function Header() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   <Link
-                    to={
-                      link.name === 'Work'
-                        ? '/?showWorkIntro=true'
-                        : link.path
-                    }
+                    to={link.path}
                     onClick={() => setMobileMenuOpen(false)}
                     className={cn(
                       'text-3xl font-display font-light tracking-wide transition-colors',
-                      location.pathname === link.path ||
-                        location.search.includes('showWorkIntro')
+                      location.pathname === link.path
                         ? 'text-foreground'
                         : 'text-muted-foreground hover:text-foreground'
                     )}

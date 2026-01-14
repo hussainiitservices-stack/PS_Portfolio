@@ -13,12 +13,7 @@
    PROJECT ENUMS
 ====================== */
 
-export type ProjectCategory =
-  | 'portraits'
-  | 'landscapes'
-  | 'editorial'
-  | 'architecture'
-  | 'documentary';
+export type ProjectCategory = string;
 
 export type AspectRatio = 'portrait' | 'landscape' | 'square';
 
