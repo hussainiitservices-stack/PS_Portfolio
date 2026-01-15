@@ -49,7 +49,7 @@ export default function Home() {
         description="A minimalist creative portfolio showcasing exceptional visual work through an editorial lens."
       />
 
-      <div className="min-h-screen pt-20 md:pt-24">
+      <div className="min-h-screen pt-4 md:pt-5">
         {/* Intro Section */}
         {showWorkIntro && (
           <section className="pt-1 pb-0 ">
@@ -79,7 +79,7 @@ export default function Home() {
 
         {/* Grid */}
         <motion.section
-          className="pt-6 pb-12 md:pt-8 md:pb-16"
+          className="pt-6 pb-12 md:pt-0 md:pb-16"
           initial={{ opacity: 0, y: 40 }}
           animate={showGrid ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}

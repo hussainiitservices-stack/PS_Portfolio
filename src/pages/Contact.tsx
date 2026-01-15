@@ -18,8 +18,10 @@ export default function Contact() {
         description="Get in touch with us for inquiries, collaborations, and project bookings."
       />
 
-      <div className="min-h-screen flex flex-col">
-        <section className="flex-1 section-padding">
+      <div className="min-h-screen flex flex-col pt-4 md:pt-5">
+
+        <section className="flex-1 pt-6 pb-12 md:pt-0 md:pb-16">
+
           <div className="container-editorial">
             <div className="max-w-3xl mx-auto text-center">
 

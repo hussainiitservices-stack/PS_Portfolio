@@ -7,8 +7,9 @@ import { SEOHead } from '@/components/seo/SEOHead';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { getProjectBySlug, getRelatedProjects } from '@/data/projects';
 import { ImageWithLightbox } from '@/components/portfolio/ImageWithLightbox';
-import { Lightbox } from '@/components/portfolio/Lightbox';
 import { VideoCard } from '@/components/portfolio/VideoCard';
+import { Lightbox } from '@/components/portfolio/Lightbox';
+
 
 /**
  * ProjectDetail
@@ -207,7 +208,7 @@ export default function ProjectDetail() {
                 .map(video => (
                   <Link
                     key={video.id}
-                    to={`/projects/${video.slug}`}
+                    to={`/project/${video.slug}`}
                     className="group block"
                   >
                     <div className="aspect-video overflow-hidden bg-black">
