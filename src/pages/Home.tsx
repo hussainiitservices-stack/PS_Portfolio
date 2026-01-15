@@ -103,7 +103,8 @@ export default function Home() {
               >
                 <Link
                   to={`/project/${project.slug}`}
-                  className="project-card group block relative aspect-[4/3] overflow-hidden"
+                  className="project-card block relative aspect-[4/3] overflow-hidden"
+
                 >
                   <img
                     src={project.coverImage}

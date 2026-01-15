@@ -6,9 +6,9 @@ import { ThemeToggle } from './ThemeToggle';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
+  { name: 'Work', path: '/' },
+  { name: 'About', path: '/about' },
   
-  { name: 'About', path: '/' },
-  { name: 'Work', path: '/work' },
   { name: 'Contact', path: '/contact' },
 ];
 

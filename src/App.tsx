@@ -37,7 +37,7 @@ function AnimatedRoutes() {
           path="/"
           element={
             <PageTransition>
-              <About />
+              <Home />
             </PageTransition>
           }
         />

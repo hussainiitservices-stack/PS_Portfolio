@@ -8,7 +8,7 @@ import Home from './Home';
 
 
 const Index = () => {
-  return <About />;
+  return <Home />;
 };
 
 export default Index;

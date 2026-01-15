@@ -4,8 +4,6 @@ import { photographerInfo } from '@/data/photographer';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { ContactProjectCarousel } from '@/components/portfolio/ContactProjectCarousel';
 
-
-
 /**
  * Contact page - Minimal, editorial typography
  * Display contact information only (no form)
@@ -19,11 +17,10 @@ export default function Contact() {
       />
 
       <div className="min-h-screen flex flex-col pt-4 md:pt-5">
-
         <section className="flex-1 pt-6 pb-12 md:pt-0 md:pb-16">
-
           <div className="container-editorial">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-3xl mx-auto text-center scale-[0.8] md:scale-[0.85] origin-top">
+
 
               {/* Heading */}
               <motion.div
@@ -44,7 +41,11 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.2,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 className="space-y-10"
               >
                 {/* Email */}
@@ -62,15 +63,59 @@ export default function Contact() {
 
                 {/* Phone */}
                 {photographerInfo.phone && (
-                  <div> <p className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4" style={{ fontFamily: 'Merriweather, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }} > Phone </p> <div className="space-y-2"> {photographerInfo.phone.map((number) => ( <a key={number} href={`tel:${number.replace(/[^\d+]/g, '')}`} className="block text-2xl md:text-3xl lg:text-4xl font-light text-foreground hover:text-muted-foreground transition-colors" style={{ fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }} > {number} </a> ))} </div> </div>
+                  <div>
+                    <p
+                      className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4"
+                      style={{
+                        fontFamily:
+                          'Merriweather, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+                      }}
+                    >
+                      Phone
+                    </p>
+                    <div className="space-y-2">
+                      {photographerInfo.phone.map((number) => (
+                        <a
+                          key={number}
+                          href={`tel:${number.replace(/[^\d+]/g, '')}`}
+                          className="block text-2xl md:text-3xl lg:text-4xl font-light text-foreground hover:text-muted-foreground transition-colors"
+                          style={{
+                            fontFamily:
+                              'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+                          }}
+                        >
+                          {number}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 )}
 
                 {/* Location */}
-                <div> <p className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4" style={{ fontFamily: 'Merriweather, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }} > Location </p> <p className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground" style={{ fontFamily: 'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif' }} > {photographerInfo.location} </p> </div>
+                <div>
+                  <p
+                    className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4"
+                    style={{
+                      fontFamily:
+                        'Merriweather, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+                    }}
+                  >
+                    Location
+                  </p>
+                  <p
+                    className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground"
+                    style={{
+                      fontFamily:
+                        'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+                    }}
+                  >
+                    {photographerInfo.location}
+                  </p>
+                </div>
               </motion.div>
 
               {/* Socials (optional) */}
-              {/* 
+              {/*
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -82,7 +127,11 @@ export default function Contact() {
                 </p>
                 <div className="flex justify-center gap-8">
                   {photographerInfo.socialLinks.instagram && (
-                    <a href={photographerInfo.socialLinks.instagram} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={photographerInfo.socialLinks.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Instagram className="size-5" />
                     </a>
                   )}
@@ -92,10 +141,8 @@ export default function Contact() {
             </div>
           </div>
         </section>
-        
-<ContactProjectCarousel />
 
-
+        <ContactProjectCarousel />
       </div>
     </>
   );
