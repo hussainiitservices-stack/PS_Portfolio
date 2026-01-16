@@ -344,7 +344,7 @@ export const projects: Project[] = [
   year: '2024',
 
   // Commercial service-based video
-  category: 'commercial',
+  category: 'Family_handy',
 
   // Explicitly mark as video project
   type: 'video',
@@ -746,7 +746,7 @@ export const projects: Project[] = [
   year: '2024',
 
   // Enterprise / SaaS commercial video
-  category: 'commercial',
+  category: 'Salesforce',
 
   // Explicitly mark as video project
   type: 'video',
@@ -1738,6 +1738,466 @@ export const projects: Project[] = [
     }
   ]
 },
+
+{
+  id: '27',
+  title: 'AI PIT Viper',
+  slug: 'ai-pit-viper',
+  year: '2024',
+
+  // AI-driven cinematic video
+  category: 'Ai',
+
+  // Explicitly mark as video project
+  type: 'video',
+
+  // Explicit video provider (NO GUESSING)
+  provider: 'drive',
+
+  /**
+   * Google Drive thumbnail for grid / preview
+   * Format:
+   * https://drive.google.com/thumbnail?id=FILE_ID&sz=w1000
+   */
+  coverImage:
+    'https://drive.google.com/thumbnail?id=1Cro2HRqIQnaOohJ4Tu4PciLkslcCRkRG&sz=w1000',
+
+  /**
+   * Google Drive file ID
+   * Used by VideoCard for playback
+   */
+  driveFileId: '1Cro2HRqIQnaOohJ4Tu4PciLkslcCRkRG',
+
+  description:
+    'An AI-driven cinematic project exploring aggression, speed, and precision through stylized motion and high-contrast visuals. The film blends artificial intelligence aesthetics with cinematic pacing to create a bold, futuristic visual narrative.',
+
+  client: 'Personal Project',
+  location: 'Global',
+
+  /**
+   * Screenshots from the video
+   * (Not rendered for video projects but kept for schema consistency)
+   */
+  images: [
+    {
+      id: '27-1',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
+      alt: 'AI-generated cinematic frame featuring PIT Viper concept',
+      aspectRatio: 'landscape'
+    },
+    {
+      id: '27-2',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-2.jpg',
+      alt: 'High-contrast AI visual emphasizing speed and intensity',
+      aspectRatio: 'landscape'
+    },
+    {
+      id: '27-3',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-3.jpg',
+      alt: 'Stylized AI-driven motion sequence',
+      aspectRatio: 'landscape'
+    },
+    {
+      id: '27-4',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-4.jpg',
+      alt: 'Final frame highlighting AI PIT Viper cinematic tone',
+      aspectRatio: 'landscape'
+    }
+  ]
+},
+
+{
+  id: '28',
+  title: 'Benefits of AgentForce',
+  slug: 'benefits-of-agentforce',
+  year: '2024',
+
+  // Salesforce / enterprise explainer video
+  category: 'Salesforce',
+
+  // Explicitly mark as video project
+  type: 'video',
+
+  // Explicit video provider (NO GUESSING)
+  provider: 'drive',
+
+  /**
+   * Google Drive thumbnail for grid / preview
+   * Format:
+   * https://drive.google.com/thumbnail?id=FILE_ID&sz=w1000
+   */
+  coverImage:
+    'https://drive.google.com/thumbnail?id=1cT7jHAYrobYbBZvFt7z-MxV-G3zQerQy&sz=w1000',
+
+  /**
+   * Google Drive file ID
+   * Used by VideoCard for playback
+   */
+  driveFileId: '1cT7jHAYrobYbBZvFt7z-MxV-G3zQerQy',
+
+  description:
+    'An enterprise explainer video highlighting the benefits of Salesforce AgentForce. The project uses clean motion graphics, structured information flow, and cinematic polish to clearly communicate product value, efficiency, and real-world business impact.',
+
+  client: 'Salesforce',
+  location: 'Global',
+
+  /**
+   * Screenshots from the video
+   * (Not rendered for video projects but kept for schema consistency)
+   */
+  images: [
+    {
+      id: '28-1',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
+      alt: 'Salesforce AgentForce explainer visuals with clean motion design',
+      aspectRatio: 'landscape'
+    },
+    {
+      id: '28-2',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-2.jpg',
+      alt: 'Enterprise workflow illustration showcasing AgentForce benefits',
+      aspectRatio: 'landscape'
+    },
+    {
+      id: '28-3',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-3.jpg',
+      alt: 'Cinematic motion graphics highlighting Salesforce solutions',
+      aspectRatio: 'landscape'
+    },
+    {
+      id: '28-4',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-4.jpg',
+      alt: 'Final frame emphasizing productivity and automation',
+      aspectRatio: 'landscape'
+    }
+  ]
+},
+
+{
+  id: '29',
+  title: 'SAAS YouTube Video',
+  slug: 'youtube-SAAS',
+  year: '2024',
+
+  // YouTube-based video
+  category: 'SaaS',
+
+  // Explicitly mark as video project
+  type: 'video',
+
+  // Explicit provider
+  // provider: 'youtube',
+
+  /**
+   * YouTube thumbnail
+   * Format:
+   * https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg
+   */
+  coverImage:
+    'https://img.youtube.com/vi/nbeTL71Gnjs/hqdefault.jpg',
+
+  /**
+   * YouTube video ID
+   */
+  youtubeId: 'nbeTL71Gnjs',
+
+  description:
+    'A YouTube-hosted video project showcasing cinematic storytelling and visual presentation. Designed for online distribution with optimized pacing and engagement.',
+
+  keywords: ['youtube'],
+
+  client: 'YouTube',
+  location: 'Global',
+
+  images: [
+    {
+      id: '29-1',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
+      alt: 'YouTube video preview frame',
+      aspectRatio: 'landscape'
+    }
+  ]
+},
+
+{
+  id: '30',
+  title: 'Magento YouTube Video',
+  slug: 'youtube-magento',
+  year: '2024',
+
+  // YouTube-based video
+  category: 'Magneto',
+
+  // Explicitly mark as video project
+  type: 'video',
+
+  // Explicit provider
+  // provider: 'youtube',
+
+  /**
+   * YouTube thumbnail
+   * Format:
+   * https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg
+   */
+  coverImage:
+    'https://img.youtube.com/vi/wRCLz3O2iF4/hqdefault.jpg',
+
+  /**
+   * YouTube video ID
+   */
+  youtubeId: 'wRCLz3O2iF4',
+
+  description:
+    'A Magento-focused YouTube video explaining concepts, workflows, and best practices through clear visuals and structured presentation. Optimized for online viewing with engaging pacing and practical insights.',
+
+  keywords: ['youtube'],
+
+  client: 'YouTube',
+  location: 'Global',
+
+  images: [
+    {
+      id: '30-1',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
+      alt: 'Magento YouTube video preview frame',
+      aspectRatio: 'landscape'
+    }
+  ]
+},
+
+{
+  id: '31',
+  title: "Russia's Kamov Helicopters Break Every Rule",
+  slug: 'russias-kamov-helicopters',
+
+  year: '2024',
+
+  // YouTube-based video
+  category: 'Youtube',
+
+  // Explicitly mark as video project
+  type: 'video',
+
+  // Explicit provider
+  // provider: 'youtube',
+
+  /**
+   * YouTube thumbnail
+   * Format:
+   * https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg
+   */
+  coverImage:
+    'https://img.youtube.com/vi/LpRdecE7gHw/hqdefault.jpg',
+
+  /**
+   * YouTube video ID
+   */
+  youtubeId: 'LpRdecE7gHw',
+
+  description:
+    "An in-depth YouTube video exploring Russia’s Kamov helicopter designs, breaking conventional aviation rules through coaxial rotor systems and unconventional engineering. Presented with cinematic pacing and technical storytelling.",
+
+  keywords: ['youtube'],
+
+  client: 'YouTube',
+  location: 'Global',
+
+  images: [
+    {
+      id: '31-1',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
+      alt: "Russia's Kamov helicopter in flight",
+      aspectRatio: 'landscape'
+    }
+  ]
+},
+
+{
+  id: '32',
+  title: 'XM7 Rifle | SIG Sauer’s Cutting-Edge Design Explained',
+  slug: 'xm7-rifle-sig-sauer',
+  year: '2024',
+
+  // YouTube-based video
+  category: 'Youtube',
+
+  // Explicitly mark as video project
+  type: 'video',
+
+  // Explicit provider
+  // provider: 'youtube',
+
+  /**
+   * YouTube thumbnail
+   * Format:
+   * https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg
+   */
+  coverImage:
+    'https://img.youtube.com/vi/EDRx5-BetaA/hqdefault.jpg',
+
+  /**
+   * YouTube video ID
+   */
+  youtubeId: 'EDRx5-BetaA',
+
+  description:
+    'A detailed YouTube video explaining the XM7 rifle by SIG Sauer, highlighting its advanced engineering, modular design, and next-generation military technology through clear visuals and structured storytelling.',
+
+  keywords: ['youtube'],
+
+  client: 'YouTube',
+  location: 'Global',
+
+  images: [
+    {
+      id: '32-1',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
+      alt: 'XM7 rifle by SIG Sauer showcased in video',
+      aspectRatio: 'landscape'
+    }
+  ]
+},
+
+{
+  id: '33',
+  title: 'Aircraft Carrier Shooter in Action',
+  slug: 'aircraft-carrier-shooter-in-action',
+  year: '2024',
+
+  // YouTube-based video
+  category: 'Youtube',
+
+  // Explicitly mark as video project
+  type: 'video',
+
+  // Explicit provider
+  // provider: 'youtube',
+
+  /**
+   * YouTube thumbnail
+   * Format:
+   * https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg
+   */
+  coverImage:
+    'https://img.youtube.com/vi/UJsdTtST9kY/hqdefault.jpg',
+
+  /**
+   * YouTube video ID
+   */
+  youtubeId: 'UJsdTtST9kY',
+
+  description:
+    'A high-intensity YouTube video capturing aircraft carrier deck operations, focusing on the precision, coordination, and speed of shooters in action during carrier-based flight operations.',
+
+  keywords: ['youtube'],
+
+  client: 'YouTube',
+  location: 'Global',
+
+  images: [
+    {
+      id: '33-1',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
+      alt: 'Aircraft carrier shooter directing aircraft on deck',
+      aspectRatio: 'landscape'
+    }
+  ]
+},
+
+{
+  id: '34',
+  title: 'New Salesforce AI Specialist Certification 2024: Everything You Need To Know | saasguru',
+  slug: 'salesforce-ai-specialist-certification-2024',
+  year: '2024',
+
+  // YouTube-based video
+  category: 'Salesforce',
+
+  // Explicitly mark as video project
+  type: 'video',
+
+  // Explicit provider
+  // provider: 'youtube',
+
+  /**
+   * YouTube thumbnail
+   * Format:
+   * https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg
+   */
+  coverImage:
+    'https://img.youtube.com/vi/Ctz8l9STU1M/hqdefault.jpg',
+
+  /**
+   * YouTube video ID
+   */
+  youtubeId: 'Ctz8l9STU1M',
+
+  description:
+    'A comprehensive YouTube video explaining the new Salesforce AI Specialist Certification for 2024. Covers exam structure, skills required, AI concepts, and preparation strategy, presented by saasguru with clear and practical insights.',
+
+  keywords: ['youtube'],
+
+  client: 'YouTube',
+  location: 'Global',
+
+  images: [
+    {
+      id: '34-1',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
+      alt: 'Salesforce AI Specialist Certification video preview',
+      aspectRatio: 'landscape'
+    }
+  ]
+},
+
+{
+  id: '35',
+  title: 'Salesforce Admin Career Path 🚀: Essential Certifications, Steps, and Advancement',
+  slug: 'salesforce-admin-career-path',
+  year: '2024',
+
+  // YouTube-based video
+  category: 'Salesforce',
+
+  // Explicitly mark as video project
+  type: 'video',
+
+  // Explicit provider
+  // provider: 'youtube',
+
+  /**
+   * YouTube thumbnail
+   * Format:
+   * https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg
+   */
+  coverImage:
+    'https://img.youtube.com/vi/D7PSceNGX54/hqdefault.jpg',
+
+  /**
+   * YouTube video ID
+   */
+  youtubeId: 'D7PSceNGX54',
+
+  description:
+    'A detailed YouTube video outlining the Salesforce Admin career path, covering essential certifications, step-by-step growth strategies, and advancement opportunities for professionals entering or progressing in the Salesforce ecosystem.',
+
+  keywords: ['youtube'],
+
+  client: 'YouTube',
+  location: 'Global',
+
+  images: [
+    {
+      id: '35-1',
+      src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
+      alt: 'Salesforce Admin career path video preview',
+      aspectRatio: 'landscape'
+    }
+  ]
+},
+
+
+
 
 
 

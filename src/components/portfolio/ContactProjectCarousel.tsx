@@ -11,21 +11,16 @@ export function ContactProjectCarousel() {
    * Get one project per category
    * Prefer video projects if available
    */
-  const projectsByCategory = Object.values(
-    projects.reduce<Record<string, Project>>((acc, project) => {
-      if (!acc[project.category]) {
-        acc[project.category] = project;
-      } else {
-        if (
-          acc[project.category].type !== 'video' &&
-          project.type === 'video'
-        ) {
-          acc[project.category] = project;
-        }
-      }
-      return acc;
-    }, {})
+    /**
+   * Contact carousel:
+   * Show ONLY video projects tagged with 'youtube'
+   */
+  const youtubeProjects = projects.filter(
+    project =>
+      project.type === 'video' &&
+      project.keywords?.includes('youtube')
   );
+
 
   /* ==============================
      Motion values
@@ -120,7 +115,8 @@ export function ContactProjectCarousel() {
         style={{ x }}
         className="flex gap-4 px-6 md:px-12"
       >
-        {projectsByCategory.map((project, index) => (
+        {youtubeProjects.map((project, index) => (
+
           <motion.div
             key={project.id}
             className="min-w-[280px] sm:min-w-[320px] md:min-w-[380px]"

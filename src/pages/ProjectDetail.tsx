@@ -68,15 +68,26 @@ export default function ProjectDetail() {
           transition={{ duration: 0.8 }}
         >
           {isVideoProject ? (
-            /* VIDEO PROJECT HERO */
-            <div className="w-full aspect-video">
-              <VideoCard
-                provider={project.provider} // 'vimeo' | 'drive'
-                vimeoId={project.vimeoId}
-                driveFileId={project.driveFileId}
-              />
-            </div>
-          ) : (
+  <div className="w-full aspect-video bg-black">
+    {project.youtubeId ? (
+      <iframe
+        src={`https://www.youtube.com/embed/${project.youtubeId}?autoplay=1&mute=1&rel=0`}
+        className="w-full h-full"
+        allow="autoplay; fullscreen"
+        allowFullScreen
+      />
+    ) : (
+      project.provider && (
+        <VideoCard
+          provider={project.provider}
+          vimeoId={project.vimeoId}
+          driveFileId={project.driveFileId}
+        />
+      )
+    )}
+  </div>
+) : (
+
             /* IMAGE PROJECT HERO */
             <div className="relative w-full h-[70vh] bg-muted overflow-hidden">
               <img

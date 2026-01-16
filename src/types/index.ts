@@ -23,7 +23,7 @@ export type ProjectType = 'image' | 'video';
  * Supported video providers
  * (YouTube intentionally excluded)
  */
-export type VideoProvider = 'vimeo' | 'drive';
+export type VideoProvider = 'vimeo' | 'drive' ;
 
 /* ======================
    IMAGE TYPE
@@ -94,12 +94,24 @@ export interface Project {
    */
   vimeoId?: string;
 
-  /**
+    /**
    * Google Drive file ID
    * Required when provider === 'drive'
    */
   driveFileId?: string;
+
+  /**
+   * YouTube video ID
+   * Used ONLY for embed playback
+   */
+  youtubeId?: string;
+
+  /**
+   * Optional keywords for filtering (contact carousel)
+   */
+  keywords?: string[];
 }
+
 
 /* ======================
    PHOTOGRAPHER INFO
