@@ -54,7 +54,14 @@ export default function Contact() {
                   </p>
                   <a
                     href={`mailto:${photographerInfo.email}`}
-                    className="block text-lg md:text-xl font-light text-foreground hover:text-muted-foreground transition-colors"
+                    className="
+                      block
+                      text-xl md:text-2xl
+                      font-light
+                      text-foreground
+                      hover:text-muted-foreground
+                      transition-colors
+                    "
                   >
                     {photographerInfo.email}
                   </a>
@@ -74,7 +81,7 @@ export default function Contact() {
                           href={`tel:${number.replace(/[^\d+]/g, '')}`}
                           className="
                             block
-                            text-lg md:text-xl
+                            text-base md:text-lg
                             font-sans font-normal
                             text-foreground
                             hover:text-muted-foreground
@@ -99,7 +106,7 @@ export default function Contact() {
                   </p>
                   <p
                     className="
-                      text-lg md:text-xl
+                      text-xl md:text-2xl
                       font-sans font-light
                       text-foreground
                       leading-snug
@@ -123,3 +130,4 @@ export default function Contact() {
     </>
   );
 }
+
