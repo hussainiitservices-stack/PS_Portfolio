@@ -66,12 +66,24 @@ export default function Contact() {
                     <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-2">
                       Phone
                     </p>
+
                     <div className="space-y-1">
                       {photographerInfo.phone.map((number) => (
                         <a
                           key={number}
                           href={`tel:${number.replace(/[^\d+]/g, '')}`}
-                          className="block text-lg md:text-xl font-light text-foreground hover:text-muted-foreground transition-colors"
+                          className="
+                            block
+                            text-lg md:text-xl
+                            font-sans font-normal
+                            text-foreground
+                            hover:text-muted-foreground
+                            transition-colors
+                            tabular-nums
+                          "
+                          style={{
+                            fontVariantNumeric: 'lining-nums tabular-nums',
+                          }}
                         >
                           {number}
                         </a>
