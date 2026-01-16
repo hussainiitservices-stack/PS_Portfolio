@@ -97,7 +97,18 @@ export default function Contact() {
                   <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-2">
                     Location
                   </p>
-                  <p className="text-lg md:text-xl font-light text-foreground leading-snug">
+                  <p
+                    className="
+                      text-lg md:text-xl
+                      font-sans font-light
+                      text-foreground
+                      leading-snug
+                      tabular-nums
+                    "
+                    style={{
+                      fontVariantNumeric: 'lining-nums tabular-nums',
+                    }}
+                  >
                     {photographerInfo.location}
                   </p>
                 </div>
