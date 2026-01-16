@@ -76,7 +76,7 @@ export function ContactProjectCarousel() {
         duration: 1.2,
         ease: [0.22, 1, 0.36, 1],
       });
-    }, 5000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [x]);

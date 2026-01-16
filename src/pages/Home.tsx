@@ -42,6 +42,13 @@ export default function Home() {
     }
   }, [showWorkIntro]);
 
+  /* =====================================================
+     FILTER: Exclude YouTube keyword projects from Home
+     ===================================================== */
+  const homeProjects = projects.filter(
+    (project) => !project.keywords?.includes('youtube')
+  );
+
   return (
     <>
       <SEOHead
@@ -52,7 +59,7 @@ export default function Home() {
       <div className="min-h-screen pt-4 md:pt-5">
         {/* Intro Section */}
         {showWorkIntro && (
-          <section className="pt-1 pb-0 ">
+          <section className="pt-1 pb-0">
             <div className="container-editorial">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -62,17 +69,7 @@ export default function Home() {
                 onAnimationComplete={() =>
                   setTimeout(() => setShowGrid(true), 400)
                 }
-              >
-                {/* <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-light mb-4">
-                  Work
-                </h1>
-
-                <p className="text-lg md:text-xl text-muted-foreground font-sans font-light leading-relaxed">
-                  Browse my complete portfolio of video editing and motion graphic
-                  design projects, showcasing my skills in storytelling, visual
-                  effects, and creative direction.
-                </p> */}
-              </motion.div>
+              />
             </div>
           </section>
         )}
@@ -94,7 +91,7 @@ export default function Home() {
               px-[4.5vw] py-[4vw]
             "
           >
-            {projects.map((project, index) => (
+            {homeProjects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0 }}
@@ -104,7 +101,6 @@ export default function Home() {
                 <Link
                   to={`/project/${project.slug}`}
                   className="project-card block relative aspect-[4/3] overflow-hidden"
-
                 >
                   <img
                     src={project.coverImage}
@@ -122,7 +118,8 @@ export default function Home() {
           </div>
         </motion.section>
 
-        <div className="h-12 md:h-16" />
+        {/* Reduced footer gap (safe) */}
+        <div className="h-4 md:h-6" />
       </div>
     </>
   );

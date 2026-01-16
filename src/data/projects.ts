@@ -1806,72 +1806,72 @@ export const projects: Project[] = [
   ]
 },
 
-{
-  id: '28',
-  title: 'Benefits of AgentForce',
-  slug: 'benefits-of-agentforce',
-  year: '2024',
+// {
+//   id: '28',
+//   title: 'Benefits of AgentForce',
+//   slug: 'benefits-of-agentforce',
+//   year: '2024',
 
-  // Salesforce / enterprise explainer video
-  category: 'Salesforce',
+//   // Salesforce / enterprise explainer video
+//   category: 'Salesforce',
 
-  // Explicitly mark as video project
-  type: 'video',
+//   // Explicitly mark as video project
+//   type: 'video',
 
-  // Explicit video provider (NO GUESSING)
-  provider: 'drive',
+//   // Explicit video provider (NO GUESSING)
+//   provider: 'drive',
 
-  /**
-   * Google Drive thumbnail for grid / preview
-   * Format:
-   * https://drive.google.com/thumbnail?id=FILE_ID&sz=w1000
-   */
-  coverImage:
-    'https://drive.google.com/thumbnail?id=1cT7jHAYrobYbBZvFt7z-MxV-G3zQerQy&sz=w1000',
+//   /**
+//    * Google Drive thumbnail for grid / preview
+//    * Format:
+//    * https://drive.google.com/thumbnail?id=FILE_ID&sz=w1000
+//    */
+//   coverImage:
+//     'https://drive.google.com/thumbnail?id=1cT7jHAYrobYbBZvFt7z-MxV-G3zQerQy&sz=w1000',
 
-  /**
-   * Google Drive file ID
-   * Used by VideoCard for playback
-   */
-  driveFileId: '1cT7jHAYrobYbBZvFt7z-MxV-G3zQerQy',
+//   /**
+//    * Google Drive file ID
+//    * Used by VideoCard for playback
+//    */
+//   driveFileId: '1cT7jHAYrobYbBZvFt7z-MxV-G3zQerQy',
 
-  description:
-    'An enterprise explainer video highlighting the benefits of Salesforce AgentForce. The project uses clean motion graphics, structured information flow, and cinematic polish to clearly communicate product value, efficiency, and real-world business impact.',
+//   description:
+//     'An enterprise explainer video highlighting the benefits of Salesforce AgentForce. The project uses clean motion graphics, structured information flow, and cinematic polish to clearly communicate product value, efficiency, and real-world business impact.',
 
-  client: 'Salesforce',
-  location: 'Global',
+//   client: 'Salesforce',
+//   location: 'Global',
 
-  /**
-   * Screenshots from the video
-   * (Not rendered for video projects but kept for schema consistency)
-   */
-  images: [
-    {
-      id: '28-1',
-      src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
-      alt: 'Salesforce AgentForce explainer visuals with clean motion design',
-      aspectRatio: 'landscape'
-    },
-    {
-      id: '28-2',
-      src: 'https://i.ibb.co/REPLACE-IMAGE-2.jpg',
-      alt: 'Enterprise workflow illustration showcasing AgentForce benefits',
-      aspectRatio: 'landscape'
-    },
-    {
-      id: '28-3',
-      src: 'https://i.ibb.co/REPLACE-IMAGE-3.jpg',
-      alt: 'Cinematic motion graphics highlighting Salesforce solutions',
-      aspectRatio: 'landscape'
-    },
-    {
-      id: '28-4',
-      src: 'https://i.ibb.co/REPLACE-IMAGE-4.jpg',
-      alt: 'Final frame emphasizing productivity and automation',
-      aspectRatio: 'landscape'
-    }
-  ]
-},
+//   /**
+//    * Screenshots from the video
+//    * (Not rendered for video projects but kept for schema consistency)
+//    */
+//   images: [
+//     {
+//       id: '28-1',
+//       src: 'https://i.ibb.co/REPLACE-IMAGE-1.jpg',
+//       alt: 'Salesforce AgentForce explainer visuals with clean motion design',
+//       aspectRatio: 'landscape'
+//     },
+//     {
+//       id: '28-2',
+//       src: 'https://i.ibb.co/REPLACE-IMAGE-2.jpg',
+//       alt: 'Enterprise workflow illustration showcasing AgentForce benefits',
+//       aspectRatio: 'landscape'
+//     },
+//     {
+//       id: '28-3',
+//       src: 'https://i.ibb.co/REPLACE-IMAGE-3.jpg',
+//       alt: 'Cinematic motion graphics highlighting Salesforce solutions',
+//       aspectRatio: 'landscape'
+//     },
+//     {
+//       id: '28-4',
+//       src: 'https://i.ibb.co/REPLACE-IMAGE-4.jpg',
+//       alt: 'Final frame emphasizing productivity and automation',
+//       aspectRatio: 'landscape'
+//     }
+//   ]
+// },
 
 {
   id: '29',
