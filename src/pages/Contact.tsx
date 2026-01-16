@@ -19,7 +19,8 @@ export default function Contact() {
       <div className="min-h-screen flex flex-col pt-4 md:pt-5">
         <section className="flex-1 pt-6 pb-12 md:pt-0 md:pb-16">
           <div className="container-editorial">
-           <div className="max-w-3xl mx-auto text-center scale-[0.7] md:scale-[0.75] origin-top">
+           <div className="max-w-3xl mx-auto text-center scale-[0.65] md:scale-[0.7] origin-top">
+
 
 
 
