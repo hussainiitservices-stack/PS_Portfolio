@@ -109,8 +109,9 @@ export default function About() {
           <div className="container-editorial">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2">
               <VideoCard provider="vimeo" vimeoId="1153496488" />
-              <VideoCard provider="vimeo" vimeoId="1153474335" />
               <VideoCard provider="vimeo" vimeoId="1153470464" />
+              <VideoCard provider="vimeo" vimeoId="1153474335" />
+              {/* <VideoCard provider="vimeo" vimeoId="1153470464" /> */}
               <VideoCard provider="vimeo" vimeoId="1153474376" />
             </div>
           </div>
