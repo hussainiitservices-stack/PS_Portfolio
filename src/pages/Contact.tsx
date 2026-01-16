@@ -16,14 +16,11 @@ export default function Contact() {
         description="Get in touch with us for inquiries, collaborations, and project bookings."
       />
 
-      <div className="min-h-screen flex flex-col pt-4 md:pt-5">
-        <section className="flex-1 pt-6 pb-12 md:pt-0 md:pb-16">
+      <div className="min-h-screen pt-4 md:pt-5">
+        {/* Contact Content */}
+        <section className="pt-6 pb-4 md:pt-0 md:pb-6">
           <div className="container-editorial">
-           <div className="max-w-3xl mx-auto text-center scale-[0.65] md:scale-[0.7] origin-top">
-
-
-
-
+            <div className="max-w-3xl mx-auto text-center scale-[0.65] md:scale-[0.7] origin-top">
               {/* Heading */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -115,35 +112,11 @@ export default function Contact() {
                   </p>
                 </div>
               </motion.div>
-
-              {/* Socials (optional) */}
-              {/*
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="mt-20 pt-12 border-t border-border"
-              >
-                <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-6 font-sans">
-                  Follow Us
-                </p>
-                <div className="flex justify-center gap-8">
-                  {photographerInfo.socialLinks.instagram && (
-                    <a
-                      href={photographerInfo.socialLinks.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Instagram className="size-5" />
-                    </a>
-                  )}
-                </div>
-              </motion.div>
-              */}
             </div>
           </div>
         </section>
 
+        {/* Carousel */}
         <ContactProjectCarousel />
       </div>
     </>
