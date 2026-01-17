@@ -57,7 +57,7 @@ export function Header() {
                 ADVANCE CINEMATICS
               </span>
               <span className="text-[10px] md:text-xs font-sans font-light tracking-[0.15em] text-current/70">
-                Video Editing | Motion Graphic Development | Cinematographer
+                Studio | Production | Media
               </span>
             </Link>
 
