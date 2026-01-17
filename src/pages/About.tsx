@@ -52,11 +52,11 @@ export default function About() {
                 delivery across television, digital, and commercial media.
               </p>
 
-              <p>
+              {/* <p>
                 We are currently contracted with Trusted Media Brands Inc. (TMBI)
                 and collaborate with 90seconds.com across the New Zealand and UK
                 markets.
-              </p>
+              </p> */}
             </div>
 
             {/* Resume link */}
