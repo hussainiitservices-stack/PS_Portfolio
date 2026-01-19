@@ -9,7 +9,7 @@ const footerLogos = [
   { name: 'Logo 1', src: 'https://i.ibb.co/WpGdYF0L/1674821857-saasguru-logo.png' },
   { name: 'Logo 2', src: 'https://i.ibb.co/n8fFnPcH/blue-pink.jpg' },
   { name: 'Logo 3', src: 'https://i.ibb.co/3YcdM1w3/download.png' },
-  { name: 'Logo 4', src: 'https://i.ibb.co/39LLK7RC/logo.png' },
+  { name: 'Logo 4', src: 'https://i.ibb.co/zWzkdkfX/logo.png' },
   { name: 'Logo 5', src: 'https://i.ibb.co/DPQwNG4z/logo-nav.jpg' },
 ];
 
