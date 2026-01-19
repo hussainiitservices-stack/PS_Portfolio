@@ -9,11 +9,11 @@ import { ContactProjectCarousel } from '@/components/portfolio/ContactProjectCar
  */
 
 const footerLogos = [
-  { name: 'Logo 1', src: 'https://i.ibb.co/WpGdYF0L/1674821857-saasguru-logo.png' },
-  { name: 'Logo 2', src: 'https://i.ibb.co/n8fFnPcH/blue-pink.jpg' },
-  { name: 'Logo 3', src: 'https://i.ibb.co/3YcdM1w3/download.png' },
+  { name: 'Logo 1', src: 'https://i.ibb.co/q33qc4W5/1674821857-saasguru-logo.png' },
+  { name: 'Logo 2', src: 'https://i.ibb.co/yBh5Nt7D/blue-pink.png' },
+  { name: 'Logo 3', src: 'https://i.ibb.co/xPB6wB5/download.png' },
   { name: 'Logo 4', src: 'https://i.ibb.co/zWzkdkfX/logo.png' },
-  { name: 'Logo 5', src: 'https://i.ibb.co/DPQwNG4z/logo-nav.jpg' },
+  { name: 'Logo 5', src: 'https://i.ibb.co/Q3C0LhTN/logo-nav.png' },
 ];
 
 export default function Contact() {
