@@ -7,6 +7,15 @@ import { ContactProjectCarousel } from '@/components/portfolio/ContactProjectCar
  * Contact page - Minimal, editorial typography
  * Display contact information only (no form)
  */
+
+const footerLogos = [
+  { name: 'Logo 1', src: 'https://i.ibb.co/WpGdYF0L/1674821857-saasguru-logo.png' },
+  { name: 'Logo 2', src: 'https://i.ibb.co/n8fFnPcH/blue-pink.jpg' },
+  { name: 'Logo 3', src: 'https://i.ibb.co/3YcdM1w3/download.png' },
+  { name: 'Logo 4', src: 'https://i.ibb.co/zWzkdkfX/logo.png' },
+  { name: 'Logo 5', src: 'https://i.ibb.co/DPQwNG4z/logo-nav.jpg' },
+];
+
 export default function Contact() {
   return (
     <>
@@ -136,6 +145,32 @@ export default function Contact() {
 
         {/* Carousel */}
         <ContactProjectCarousel />
+
+        {/* Full Width Logos Section */}
+<section className="relative w-screen left-1/2 -translate-x-1/2 border-t border-border mt-20">
+  <div className="py-12 md:py-16">
+    <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
+      {footerLogos.map((logo, index) => (
+        <img
+          key={index}
+          src={logo.src}
+          alt={logo.name}
+          loading="lazy"
+          className="
+            h-11           /* 🔧 LOGO SIZE (mobile) */
+            md:h-14        /* 🔧 LOGO SIZE (desktop) */
+            w-auto
+            opacity-80
+            hover:opacity-100
+            transition-opacity
+          "
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+
       </div>
     </>
   );
