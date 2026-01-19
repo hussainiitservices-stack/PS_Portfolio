@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Instagram, Linkedin, Mail } from 'lucide-react';
 import { photographerInfo } from '@/data/photographer';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { ContactProjectCarousel } from '@/components/portfolio/ContactProjectCarousel';
@@ -16,22 +15,30 @@ export default function Contact() {
         description="Get in touch with us for inquiries, collaborations, and project bookings."
       />
 
-      <div className="min-h-screen flex flex-col pt-4 md:pt-5">
-        <section className="flex-1 pt-6 pb-12 md:pt-0 md:pb-16">
+      <div className="min-h-screen pt-4 md:pt-5">
+        {/* Contact Content */}
+        <section className="pt-6 pb-6 md:pt-0 md:pb-8">
           <div className="container-editorial">
-            <div className="max-w-3xl mx-auto text-center scale-[0.8] md:scale-[0.85] origin-top">
-
-
+            <div className="max-w-2xl mx-auto text-center">
               {/* Heading */}
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               >
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-light mb-6">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-light mb-4">
                   Let's Work Together
                 </h1>
-                <p className="text-base md:text-lg text-muted-foreground font-sans font-light leading-[2em] mb-14">
+
+                {/* Description (unchanged) */}
+                <p className="
+                  text-[15px] md:text-[17px]
+                  text-gray-900
+                  font-sans font-light
+                  leading-relaxed
+                  drop-shadow-sm
+                  mb-10
+                ">
                   We're always interested in new projects and collaborations.
                   Reach out to discuss how we can bring your vision to life.
                 </p>
@@ -39,23 +46,31 @@ export default function Contact() {
 
               {/* Contact Info */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
                   duration: 0.8,
                   delay: 0.2,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="space-y-10"
+                className="space-y-8"
               >
                 {/* Email */}
                 <div>
-                  <p className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground mb-3 font-sans">
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-2">
                     Email
                   </p>
                   <a
                     href={`mailto:${photographerInfo.email}`}
-                    className="block text-xl md:text-2xl lg:text-3xl font-light font-sans text-foreground hover:text-muted-foreground transition-colors"
+                    className="
+                      block
+                      text-[20px] md:text-[22px]
+                      font-light
+                      text-gray-900
+                      drop-shadow-sm
+                      hover:text-muted-foreground
+                      transition-colors
+                    "
                   >
                     {photographerInfo.email}
                   </a>
@@ -64,24 +79,26 @@ export default function Contact() {
                 {/* Phone */}
                 {photographerInfo.phone && (
                   <div>
-                    <p
-                      className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4"
-                      style={{
-                        fontFamily:
-                          'Merriweather, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-                      }}
-                    >
+                    <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-2">
                       Phone
                     </p>
-                    <div className="space-y-2">
+
+                    <div className="space-y-1">
                       {photographerInfo.phone.map((number) => (
                         <a
                           key={number}
                           href={`tel:${number.replace(/[^\d+]/g, '')}`}
-                          className="block text-2xl md:text-3xl lg:text-4xl font-light text-foreground hover:text-muted-foreground transition-colors"
+                          className="
+                            block
+                            text-base md:text-lg
+                            font-sans font-normal
+                            text-gray-800
+                            hover:text-muted-foreground
+                            transition-colors
+                            tabular-nums
+                          "
                           style={{
-                            fontFamily:
-                              'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+                            fontVariantNumeric: 'lining-nums tabular-nums',
                           }}
                         >
                           {number}
@@ -93,55 +110,31 @@ export default function Contact() {
 
                 {/* Location */}
                 <div>
-                  <p
-                    className="text-xs font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4"
-                    style={{
-                      fontFamily:
-                        'Merriweather, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
-                    }}
-                  >
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-2">
                     Location
                   </p>
                   <p
-                    className="text-2xl md:text-3xl lg:text-4xl font-light text-foreground"
+                    className="
+                      text-[20px] md:text-[22px]
+                      font-sans font-light
+                      text-gray-900
+                      drop-shadow-sm
+                      leading-snug
+                      tabular-nums
+                    "
                     style={{
-                      fontFamily:
-                        'Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
+                      fontVariantNumeric: 'lining-nums tabular-nums',
                     }}
                   >
                     {photographerInfo.location}
                   </p>
                 </div>
               </motion.div>
-
-              {/* Socials (optional) */}
-              {/*
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="mt-20 pt-12 border-t border-border"
-              >
-                <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground mb-6 font-sans">
-                  Follow Us
-                </p>
-                <div className="flex justify-center gap-8">
-                  {photographerInfo.socialLinks.instagram && (
-                    <a
-                      href={photographerInfo.socialLinks.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Instagram className="size-5" />
-                    </a>
-                  )}
-                </div>
-              </motion.div>
-              */}
             </div>
           </div>
         </section>
 
+        {/* Carousel */}
         <ContactProjectCarousel />
       </div>
     </>

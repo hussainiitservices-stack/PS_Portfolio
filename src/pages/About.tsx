@@ -52,11 +52,11 @@ export default function About() {
                 delivery across television, digital, and commercial media.
               </p>
 
-              <p>
+              {/* <p>
                 We are currently contracted with Trusted Media Brands Inc. (TMBI)
                 and collaborate with 90seconds.com across the New Zealand and UK
                 markets.
-              </p>
+              </p> */}
             </div>
 
             {/* Resume link */}
@@ -108,9 +108,10 @@ export default function About() {
         <section className="pt-20 pb-24 border-t border-border">
           <div className="container-editorial">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-2">
+              <VideoCard provider="vimeo" vimeoId="1153496488" />
               <VideoCard provider="vimeo" vimeoId="1153470464" />
               <VideoCard provider="vimeo" vimeoId="1153474335" />
-              <VideoCard provider="vimeo" vimeoId="1153496488" />
+              {/* <VideoCard provider="vimeo" vimeoId="1153470464" /> */}
               <VideoCard provider="vimeo" vimeoId="1153474376" />
             </div>
           </div>

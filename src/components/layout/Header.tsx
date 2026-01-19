@@ -8,10 +8,8 @@ import { cn } from '@/lib/utils';
 const navLinks = [
   { name: 'Work', path: '/' },
   { name: 'About', path: '/about' },
-  
   { name: 'Contact', path: '/contact' },
 ];
-
 
 /**
  * Minimal header inspired by alexanderglucina.com
@@ -56,8 +54,16 @@ export function Header() {
               <span className="text-lg md:text-xl font-sans font-semibold tracking-[0.2em] uppercase">
                 ADVANCE CINEMATICS
               </span>
-              <span className="text-[10px] md:text-xs font-sans font-light tracking-[0.15em] text-current/70">
-                Video Editing | Motion Graphic Development | Cinematographer
+
+              {/* SUBTEXT — SHADOW ADDED */}
+              <span className="
+                text-[10px] md:text-xs
+                font-sans font-light
+                tracking-[0.15em]
+                text-current/70
+                drop-shadow-sm
+              ">
+                Studio | Production | Media
               </span>
             </Link>
 
