@@ -8,13 +8,13 @@ import { ContactProjectCarousel } from '@/components/portfolio/ContactProjectCar
  * Display contact information only (no form)
  */
 
-const footerLogos = [
-  { name: 'Logo 1', src: 'https://i.ibb.co/q33qc4W5/1674821857-saasguru-logo.png' },
-  { name: 'Logo 2', src: 'https://i.ibb.co/yBh5Nt7D/blue-pink.png' },
-  { name: 'Logo 3', src: 'https://i.ibb.co/xPB6wB5/download.png' },
-  { name: 'Logo 4', src: 'https://i.ibb.co/zWzkdkfX/logo.png' },
-  { name: 'Logo 5', src: 'https://i.ibb.co/Q3C0LhTN/logo-nav.png' },
-];
+// const footerLogos = [
+//   { name: 'Logo 1', src: 'https://i.ibb.co/q33qc4W5/1674821857-saasguru-logo.png' },
+//   { name: 'Logo 2', src: 'https://i.ibb.co/yBh5Nt7D/blue-pink.png' },
+//   { name: 'Logo 3', src: 'https://i.ibb.co/9mZZFB9p/salesfroce.png' },
+//   { name: 'Logo 4', src: 'https://i.ibb.co/8nFtGpfz/MGT.jpg' },
+//   { name: 'Logo 5', src: 'https://i.ibb.co/hxQvLnSJ/TMB-Media-modified.webp' },
+// ];
 
 export default function Contact() {
   return (
@@ -29,6 +29,7 @@ export default function Contact() {
         <section className="pt-6 pb-6 md:pt-0 md:pb-8">
           <div className="container-editorial">
             <div className="max-w-2xl mx-auto text-center">
+
               {/* Heading */}
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
@@ -39,7 +40,6 @@ export default function Contact() {
                   Let's Work Together
                 </h1>
 
-                {/* Description (unchanged) */}
                 <p className="
                   text-[15px] md:text-[17px]
                   text-gray-900
@@ -106,9 +106,7 @@ export default function Contact() {
                             transition-colors
                             tabular-nums
                           "
-                          style={{
-                            fontVariantNumeric: 'lining-nums tabular-nums',
-                          }}
+                          style={{ fontVariantNumeric: 'lining-nums tabular-nums' }}
                         >
                           {number}
                         </a>
@@ -131,14 +129,13 @@ export default function Contact() {
                       leading-snug
                       tabular-nums
                     "
-                    style={{
-                      fontVariantNumeric: 'lining-nums tabular-nums',
-                    }}
+                    style={{ fontVariantNumeric: 'lining-nums tabular-nums' }}
                   >
                     {photographerInfo.location}
                   </p>
                 </div>
               </motion.div>
+
             </div>
           </div>
         </section>
@@ -146,30 +143,32 @@ export default function Contact() {
         {/* Carousel */}
         <ContactProjectCarousel />
 
-        {/* Full Width Logos Section */}
-<section className="relative w-screen left-1/2 -translate-x-1/2 border-t border-border mt-20">
-  <div className="py-12 md:py-16">
-    <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
-      {footerLogos.map((logo, index) => (
-        <img
-          key={index}
-          src={logo.src}
-          alt={logo.name}
-          loading="lazy"
-          className="
-            h-11           /* 🔧 LOGO SIZE (mobile) */
-            md:h-14        /* 🔧 LOGO SIZE (desktop) */
-            w-auto
-            opacity-80
-            hover:opacity-100
-            transition-opacity
-          "
-        />
-      ))}
-    </div>
-  </div>
-</section>
-
+        {/* ================= LOGO SECTION (COMMENTED) ================= */}
+        {/*
+        <section className="relative w-screen left-1/2 -translate-x-1/2 border-t border-border mt-20">
+          <div className="py-12 md:py-16">
+            <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14">
+              {footerLogos.map((logo, index) => (
+                <img
+                  key={index}
+                  src={logo.src}
+                  alt={logo.name}
+                  loading="lazy"
+                  className="
+                    h-11
+                    md:h-14
+                    w-auto
+                    opacity-80
+                    hover:opacity-100
+                    transition-opacity
+                  "
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+        */}
+        {/* ============================================================ */}
 
       </div>
     </>
