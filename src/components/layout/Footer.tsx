@@ -37,14 +37,14 @@ export function Footer() {
   </p>
 
   {/* Project Credit */}
-  {/* <a
+   <a
   href="https://hussainiitservices.com/"
   target="_blank"
   rel="noopener noreferrer"
   className="block text-xs font-sans text-muted-foreground hover:text-foreground transition mt-1"
 >
   Project designed & developed by <span className="font-medium">Hussaini IT Services</span>
-</a> */}
+</a> 
 
 </div>
 
